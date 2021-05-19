@@ -5,12 +5,9 @@ import sympy as sp
 from sympy.utilities.lambdify import lambdify
 
 
-def Drive():
-    x = sp.symbols('x')
-    func = 4*x**3 + -8*x**3 + x**2 - 3*x + 9
-    big_range = (-10, 10)
-    eps = 0.0001
-    print("f(x) = ", func, ",Range = ", big_range, ", epsilon = ", eps)
+def Drive(func, big_range, epsilon, step):
+
+    print("f(x) = ", func, ",Range = ", big_range, ", epsilon = ", epsilon)
     choice = input("[1] Bisection\n[2] Newton-Raphson\n[3] secant\nPick a Method:")
 
     if choice == '1':
@@ -21,34 +18,39 @@ def Drive():
 
     elif choice == '3':
         method = secant_method
+
     else:
         print("Invalid choice")
+        return
 
-    print(sol)
-
-
-def solver():
+    solver(func, big_range, epsilon, step)
 
 
+def solver(unc, big_range, epsilon, step, method):
+    left_bound, right_bound = big_range
+    a = left_bound, b = left_bound + step
 
-def Bisection_Method(f, rng, eps):
-    a, b = rng
-    while abs(b - a) > eps:
-        c = (a + b)/2
-        if f(a) * f(c) > 0:
-            a = c
-        else:
-            b = c
-
-    x = (a + b)/2
+    while b<=
 
 
-def Newton_Raphson(pol, rng, eps):
+
+def Bisection_Method(pol, little_range, eps):
+    return 1
+
+
+def Newton_Raphson(pol, little_range, eps):
     return True
 
 
-def secant_method(pol, rng, eps):
+def secant_method(pol, little_range, eps):
     return True
 
 
-Drive()
+x = sp.symbols('x')
+user_func = 4*x**3 + -8*x**3 + x**2 - 3*x + 9
+user_range = (-10, 10)
+user_epsilon = 0.0001
+user_step = 0.1
+
+
+# Drive(user_func, user_big_range, user_epsilon, user_step)
