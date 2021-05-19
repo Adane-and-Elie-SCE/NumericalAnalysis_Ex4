@@ -1,7 +1,6 @@
 #  Adane Adgo - 315721969
 #  Elie Bracha -
 
-
 import sympy as sp
 from sympy.utilities.lambdify import lambdify
 
@@ -30,8 +29,6 @@ def Drive():
 
 def create_range(f):
     for i in range(-10, 10):
-        return True
-    return True
 
 
 
