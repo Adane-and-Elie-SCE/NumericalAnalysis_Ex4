@@ -7,28 +7,27 @@ from sympy.utilities.lambdify import lambdify
 
 def Drive():
     x = sp.symbols('x')
-    pol = 4*x**4 + -8*x**3 + x**2 - 3*x + 9
-    rng = (-2, 2)
+    func = 4*x**3 + -8*x**3 + x**2 - 3*x + 9
+    big_range = (-10, 10)
     eps = 0.0001
-
-    print("p(x) = ", pol, ",Range = ", rng, ", epsilon = ", eps)
+    print("f(x) = ", func, ",Range = ", big_range, ", epsilon = ", eps)
     choice = input("[1] Bisection\n[2] Newton-Raphson\n[3] secant\nPick a Method:")
 
     if choice == '1':
-        Bisection_Method(lambdify(x, pol), rng, eps)
+        method = Bisection_Method
 
     elif choice == '2':
-        sol = Newton_Raphson(lambdify(x, pol), rng, eps)
+        method = Newton_Raphson
 
     elif choice == '3':
-        sol = secant_method(lambdify(x, pol), rng, eps)
+        method = secant_method
     else:
         print("Invalid choice")
 
     print(sol)
 
-def create_range(f):
-    for i in range(-10, 10):
+
+def solver():
 
 
 
@@ -42,9 +41,6 @@ def Bisection_Method(f, rng, eps):
             b = c
 
     x = (a + b)/2
-
-
-
 
 
 def Newton_Raphson(pol, rng, eps):
