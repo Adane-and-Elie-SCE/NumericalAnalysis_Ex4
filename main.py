@@ -1,5 +1,8 @@
 #  Adane Adgo - 315721969
 #  Elie Bracha - 204795900
+
+# https://github.com/Adane-and-Elie-SCE/NumericalAnalysis_Ex4.git
+
 import math
 
 import sympy as sp
