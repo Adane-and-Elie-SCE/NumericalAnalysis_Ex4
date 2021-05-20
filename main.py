@@ -1,5 +1,5 @@
 #  Adane Adgo - 315721969
-#  Elie Bracha -
+#  Elie Bracha - 204795900
 import math
 
 import sympy as sp
